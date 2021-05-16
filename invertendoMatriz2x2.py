@@ -1,4 +1,4 @@
-size = 2
+
 def check_pivo(linha0, linha1, id0, id1, size):
     # se o pivo da linha0 for 0, trocar com a linha1 se a linha 1 for dif  de 0
     if ((linha0[0] == 0)):
@@ -15,19 +15,13 @@ def check_pivo(linha0, linha1, id0, id1, size):
                 id0[i] = id1[i]
                 id1[i] =auxid[i]
                 i += 1  
-            print(a0)
-            print(a1)      
-
-a0 = [0,2]
-a1 = [1,0]
-ida0 = [1, 0]
-ida1 = [0, 1]    
-
-check_pivo(a0, a1, ida0, ida1, size)
+            
 
 def inverte(linha0, linha1, id0, id1, size):
     #pivo linha 0
+    check_pivo(linha0, linha1, id0, id1, size)
     pivo = linha0[0]
+    
     i = 0
     while (i<size):
         linha0[i] = linha0[i]/pivo
@@ -58,16 +52,17 @@ def inverte(linha0, linha1, id0, id1, size):
     
     print(linha0, id0)
     print(linha1,id1)
-
-        
-
-    #print(linha0, id0, '\n', linha1, id1)    
+   
 
     
 
         
-
-inverte(a0, a1, ida0, ida1, size)        
+a0 = [3,2]
+a1 = [1,7]
+ida0 = [1, 0]
+ida1 = [0, 1]    
+tamanho = 2
+inverte(a0, a1, ida0, ida1, tamanho)        
     
             
             
