@@ -129,7 +129,7 @@ def inverte(linha0, linha1, linha2, id0, id1, id2, size):
     print(linha2, id2)       
 a0 = [0,2,2]
 a1 = [1,0,4]
-a2 = [7,0,2]
+a2 = [7,0,0]
 
 ida0 = [1, 0, 0]
 ida1 = [0, 1, 0]    
