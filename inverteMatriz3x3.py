@@ -1,5 +1,5 @@
 
-def check_pivo_linha0(linha0, linha1, linha2, id0, id1, id2, size):
+def check_pivo_linha0():
     # se o pivo da linha0 for 0, trocar com a linha1 se a linha 1 for dif  de 0
     if ((linha0[0] == 0)):
         aux = [0,0,0]
@@ -9,11 +9,12 @@ def check_pivo_linha0(linha0, linha1, linha2, id0, id1, id2, size):
             i = 0
             while (i < size): #loop pra passar a linha
                 aux[i] = linha0[i]
-                linha0[i] = linha1[i]
-                linha1[i] = aux[i]
-            
                 auxid[i] = id0[i]
+
+                linha0[i] = linha1[i]
                 id0[i] = id1[i]
+                
+                linha1[i] = aux[i]    
                 id1[i] =auxid[i]
                 i += 1  
         #se a linha1 for zero substituir pela 2       
@@ -29,7 +30,7 @@ def check_pivo_linha0(linha0, linha1, linha2, id0, id1, id2, size):
                 id2[i] =auxid[i]
                 i += 1 
 
-def check_pivo_linha1(linha0, linha1, linha2, id0, id1, id2, size):
+def check_pivo_linha1():
     # se o pivo da linha1 for 0, trocar com a linha2 
     if ((linha1[1] == 0)):
         aux = [0,0,0]
@@ -48,9 +49,9 @@ def check_pivo_linha1(linha0, linha1, linha2, id0, id1, id2, size):
                 id2[i] =auxid[i]
                 i += 1 
 
-def inverte(linha0, linha1, linha2, id0, id1, id2, size):
+def inverte():
     ###########################  pivo linha0 #############################
-    check_pivo_linha0(linha0, linha1, linha2, id0, id1, id2, size)
+    check_pivo_linha0()
     pivo = linha0[0]
     
     #dividindo tudo pelo pivo -> colocando o pivo =1 
@@ -76,7 +77,7 @@ def inverte(linha0, linha1, linha2, id0, id1, id2, size):
         i += 1
 
     ###########################  pivo linha1 #############################
-    check_pivo_linha1(linha0, linha1, linha2, id0, id1, id2, size)
+    check_pivo_linha1()
     pivo = linha1[1] # ainda tem que checar se ele é diferente de 0
     i = 0
     # #dividindo a linha1 pelo pivo -> colocando o pivo =1
@@ -126,16 +127,20 @@ def inverte(linha0, linha1, linha2, id0, id1, id2, size):
    
     print(linha0, id0)
     print(linha1, id1)
-    print(linha2, id2)       
-a0 = [0,2,2]
-a1 = [1,0,4]
-a2 = [7,0,0]
+    print(linha2, id2) 
 
-ida0 = [1, 0, 0]
-ida1 = [0, 1, 0]    
-ida2 = [0, 0, 1]
-tamanho = 3
-inverte(a0, a1, a2, ida0, ida1, ida2, tamanho)        
+
+
+global linha0, linha1, linha2, id0, id1, id2, size
+linha0 = [0,2,2]
+linha1 = [1,0,4]
+linha2 = [7,0,0]
+
+id0 = [1, 0, 0]
+id1 = [0, 1, 0]    
+id2 = [0, 0, 1]
+size = 3
+inverte()        
     
             
             
