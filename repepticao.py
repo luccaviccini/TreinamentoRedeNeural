@@ -17,6 +17,13 @@ for i in range(10):
             print("lucca{i}".format(i=j)) 
 
                    
+########
 
-
+tamanho = 10
+print("aux = [", end = '')
+for i in range(tamanho):
+  print("0", end = '')
+  if(i != tamanho-1):
+    print(",", end = '')
+print("]", end = '')  
 

@@ -1,25 +1,24 @@
-tamanho = 5
-
+tamanho = 3
 f = open("Output_gerador.py", "w")
+ # para escrever o vetor auxiliar 
+f.write("aux   = [")
+for h in range(tamanho):
+    f.write("0")
+    if (h != tamanho-1):
+        f.write(",")
+f.write("]\n")  
+    # para escrever o vetor auxiliar da id
+f.write("auxid = [")
+for q in range(tamanho):
+    f.write("0")
+    if (q != tamanho-1):
+        f.write(",")
+f.write("]\n")
+
 # i serve para o número de checagens de pivo -> tamanho-1
 for i in range(tamanho-1):
     f.write("def check_pivo_linha{i}(): \n".format(i=i)) 
-    f.write("    if ((linha{i}[{i}] == 0)):\n".format(i=i))
-    # para escrever o vetor auxiliar 
-    f.write("    aux   = [")
-    for h in range(tamanho):
-        f.write("0")
-        if (h != tamanho-1):
-            f.write(",")
-    f.write("]\n")  
-    # para escrever o vetor auxiliar da id
-    f.write("    auxid = [")
-    for q in range(tamanho):
-        f.write("0")
-        if (q != tamanho-1):
-            f.write(",")
-    f.write("]\n")         
-   
+    f.write("    if ((linha{i}[{i}] == 0)):\n".format(i=i))      
     flag1 = 0
     # para percorrer o as linhas da matriz, zerando em cima e embaixo do pivo.
     for j in range(tamanho):

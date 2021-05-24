@@ -1,9 +1,10 @@
-
+aux = [0,0,0]
+auxid = [0,0,0]
 def check_pivo_linha0():
     # se o pivo da linha0 for 0, trocar com a linha1 se a linha 1 for dif  de 0
     if ((linha0[0] == 0)):
-        aux = [0,0,0]
-        auxid = [0,0,0]
+        #aux = [0,0,0]
+        #auxid = [0,0,0]
         # se o pivo da linha1 nao for 0
         if(linha1[0] != 0):          
             i = 0
@@ -13,7 +14,7 @@ def check_pivo_linha0():
 
                 linha0[i] = linha1[i]
                 id0[i] = id1[i]
-                
+
                 linha1[i] = aux[i]    
                 id1[i] =auxid[i]
                 i += 1  
@@ -22,19 +23,20 @@ def check_pivo_linha0():
             i=0
             while (i < size): #loop pra passar a linha
                 aux[i] = linha0[i]
-                linha0[i] = linha2[i]
-                linha2[i] = aux[i]
-            
                 auxid[i] = id0[i]
+
+                linha0[i] = linha2[i]
                 id0[i] = id2[i]
+
+                linha2[i] = aux[i]                       
                 id2[i] =auxid[i]
                 i += 1 
 
 def check_pivo_linha1():
     # se o pivo da linha1 for 0, trocar com a linha2 
     if ((linha1[1] == 0)):
-        aux = [0,0,0]
-        auxid = [0,0,0]
+        #aux = [0,0,0]
+        #auxid = [0,0,0]
         
        #se o pivo da linha1 for zero substituir pela 2       
         if(linha2[0] != 0):
