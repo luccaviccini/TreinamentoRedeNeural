@@ -39,7 +39,7 @@ def check_pivo_linha1():
         #auxid = [0,0,0]
         
        #se o pivo da linha1 for zero substituir pela 2       
-        if(linha2[0] != 0):
+        if(linha2[1] != 0):
             i=0
             while (i < size): #loop pra passar a linha
                 aux[i] = linha1[i]

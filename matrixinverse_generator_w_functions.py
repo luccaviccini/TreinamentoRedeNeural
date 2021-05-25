@@ -16,7 +16,7 @@ for q in range(tamanho):
 f.write("]\n")
 
 # i serve para o número de checagens de pivo -> tamanho-1
-for i in range(tamanho-1):
+""" for i in range(tamanho-1):
     f.write("def check_pivo_linha{i}(): \n".format(i=i)) 
     f.write("    if ((linha{i}[{i}] == 0)):\n".format(i=i))      
     flag1 = 0
@@ -51,11 +51,12 @@ for i in range(tamanho-1):
                 f.write("                linha{j}[i] = aux[i]\n".format(i=i, j=j))
                 f.write("                id{j}[i] = auxid[i]\n".format(i=i, j=j))
                 f.write("                i += 1\n") 
-
+ """
 f.write("def inverte():\n")
 for i in range(tamanho):
     f.write("###########################  pivo linha{i} #############################\n".format(i=i))
     if( i != tamanho-1):
+        
         f.write("    check_pivo_linha{i}()\n".format(i=i))
     f.write("    pivo = linha{i}[{i}]\n".format(i=i))
     f.write("    i=0\n")
