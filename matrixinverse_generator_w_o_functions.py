@@ -65,7 +65,7 @@ for i in range(tamanho):
                     f.write("                id{i}[i] = id{j}[i]\n".format(i=i, j=j))
                     f.write("                linha{j}[i] = aux[i]\n".format(i=i, j=j))
                     f.write("                id{j}[i] = auxid[i]\n".format(i=i, j=j))
-                    f.write("                i += 1\n")
+                    f.write("                i = i + 1\n")
                 else:
                     f.write("        elif(linha{j}[{i}] != 0):\n".format(j=j, i=i))   
                     f.write("            i = 0\n")
@@ -76,7 +76,7 @@ for i in range(tamanho):
                     f.write("                id{i}[i] = id{j}[i]\n".format(i=i, j=j))
                     f.write("                linha{j}[i] = aux[i]\n".format(i=i, j=j))
                     f.write("                id{j}[i] = auxid[i]\n".format(i=i, j=j))
-                    f.write("                i += 1\n") 
+                    f.write("                i = i + 1\n") 
 
         f.write("###########################  FIM CHECAGEM PIVO{i} #############################\n".format(i=i))
 
@@ -85,7 +85,7 @@ for i in range(tamanho):
     f.write("    while(i < size):\n")
     f.write("        linha{i}[i] = linha{i}[i]/pivo\n".format(i=i))
     f.write("        id{i}[i] = id{i}[i]/pivo\n".format(i=i))
-    f.write("        i += 1\n")
+    f.write("        i = i + 1\n")
     for j in range(tamanho):
         if(j == i):
             continue
@@ -95,7 +95,7 @@ for i in range(tamanho):
             f.write("    while(i<size):\n")
             f.write("        linha{j}[i] = linha{j}[i] - cofator*linha{i}[i]\n".format(j=j, i=i))
             f.write("        id{j}[i] = id{j}[i] - cofator*id{i}[i]\n".format(j=j, i=i))
-            f.write("        i += 1\n") 
+            f.write("        i = i + 1\n") 
     if(i == tamanho-1):
         f.write("\n\n")
         for g in range(tamanho):
