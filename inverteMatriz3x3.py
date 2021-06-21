@@ -1,6 +1,12 @@
 aux = [0,0,0]
 auxid = [0,0,0]
 def check_pivo_linha0():
+    aux = [0,0,0]
+    auxid = [0,0,0]
+    id0 = [1, 0, 0]
+    id1 = [0, 1, 0]    
+    id2 = [0, 0, 1]
+    size = 3
     # se o pivo da linha0 for 0, trocar com a linha1 se a linha 1 for dif  de 0
     if ((linha0[0] == 0)):
         #aux = [0,0,0]
@@ -135,13 +141,16 @@ def inverte():
 
 global linha0, linha1, linha2, id0, id1, id2, size
 linha0 = [0,2,2]
-linha1 = [1,0,4]
-linha2 = [7,0,0]
+linha1 = [0,6,4]
+linha2 = [0,9,4]
 
 id0 = [1, 0, 0]
 id1 = [0, 1, 0]    
 id2 = [0, 0, 1]
 size = 3
+print(linha0, id0)
+print(linha1, id1)
+print(linha2, id2) 
 inverte()        
     
             
