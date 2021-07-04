@@ -1,5 +1,5 @@
 import random
-tamanho = 97
+tamanho = 3
 f = open("Output_gerador.py", "w")
  # para escrever o vetor auxiliar 
 """ f.write("size = {tamanho}\n".format(tamanho = tamanho)) 
