@@ -53,17 +53,29 @@ for i in range(tamanho):
                 if(flag == 0):
                     flag = 1
 
-                    
-                    f.write("        if(soma_{j}[{i}] != 0) {cb}\n".format(j=j, i=i, cb = '{'))
-                    f.write("            i = 0;\n")
-                    f.write("            while (i < size) {\n")
-                    f.write("                aux[i] = soma_{i}[i];\n".format(i=i)) 
-                    f.write("                auxid[i] = id{i}[i];\n".format(i=i)) 
-                    f.write("                soma_{i}[i] = soma_{j}[i];\n".format(i=i, j=j))
-                    f.write("                id{i}[i] = id{j}[i];\n".format(i=i, j=j))
-                    f.write("                soma_{j}[i] = aux[i];\n".format(i=i, j=j))
-                    f.write("                id{j}[i] = auxid[i];\n".format(i=i, j=j))
-                    f.write("                i = i + 1;} }\n")
+                    if((j != tamanho-1) and (i != tamanho -2)):
+                        f.write("        if(soma_{j}[{i}] != 0) {cb}\n".format(j=j, i=i, cb = '{'))
+                        f.write("            i = 0;\n")
+                        f.write("            while (i < size) {\n")
+                        f.write("                aux[i] = soma_{i}[i];\n".format(i=i)) 
+                        f.write("                auxid[i] = id{i}[i];\n".format(i=i)) 
+                        f.write("                soma_{i}[i] = soma_{j}[i];\n".format(i=i, j=j))
+                        f.write("                id{i}[i] = id{j}[i];\n".format(i=i, j=j))
+                        f.write("                soma_{j}[i] = aux[i];\n".format(i=i, j=j))
+                        f.write("                id{j}[i] = auxid[i];\n".format(i=i, j=j))
+                        f.write("                i = i + 1;} }\n")
+                    else:
+                        f.write("        if(soma_{j}[{i}] != 0) {cb}\n".format(j=j, i=i, cb = '{'))
+                        f.write("            i = 0;\n")
+                        f.write("            while (i < size) {\n")
+                        f.write("                aux[i] = soma_{i}[i];\n".format(i=i)) 
+                        f.write("                auxid[i] = id{i}[i];\n".format(i=i)) 
+                        f.write("                soma_{i}[i] = soma_{j}[i];\n".format(i=i, j=j))
+                        f.write("                id{i}[i] = id{j}[i];\n".format(i=i, j=j))
+                        f.write("                soma_{j}[i] = aux[i];\n".format(i=i, j=j))
+                        f.write("                id{j}[i] = auxid[i];\n".format(i=i, j=j))
+                        f.write("                i = i + 1;} } }\n")
+
                 else:
                     f.write("        else if(soma_{j}[{i}] != 0) {cb}\n".format(j=j, i=i, cb = '{'))   
                     f.write("            i = 0;\n")

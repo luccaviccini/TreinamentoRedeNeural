@@ -64,7 +64,7 @@ auxid[0] = 0; auxid[1] = 0; auxid[2] = 0;
                 id1[i] = id2[i];
                 soma_2[i] = aux[i];
                 id2[i] = auxid[i];
-                i = i + 1;} }
+                i = i + 1;} } }
 ///////////////////////////  FIM CHECAGEM PIVO1 ////////////////////////////
     pivo = soma_1[1];
     i=0;
